@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return "welcome to alphatech"
+
+@app.get("/products")
+def get_products():
+    return {"products": ["Laptop", "Phone", "Mouse"]}
+
+@app.get("/contactus")
+def get_connected():
+    return "you can contact us anytime"
+
+@app.get("/services")
+def info_services():
+    return {"SERVICES" : ["WEB_DEVELOPMENT","APP_DEVELOPMENT"]}
